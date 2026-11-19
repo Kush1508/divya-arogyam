@@ -21,7 +21,7 @@ export interface GalleryItem {
 }
 
 // Define the props for the CircularGallery component
-export interface CircularGalleryProps extends HTMLAttributes<HTMLDivElement> {
+export interface CircularGalleryProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onSelect'> {
   items: GalleryItem[];
   /** Controls how far the items are from the center. */
   radius?: number;
